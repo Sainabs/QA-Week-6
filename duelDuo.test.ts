@@ -52,7 +52,7 @@ test('Add to Duo button displays player-duo', async () => {
 
 //     const duoDiv = await driver.findElement(By.id('player-duo'))
 
-//     // expect(duoDiv).toBe(true)
+//    expect(duoDiv).toBe(true)
  
 //     await driver.sleep(4000) 
 // })
