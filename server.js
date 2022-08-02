@@ -72,11 +72,11 @@ app.post('/api/duel', (req, res) => {
         // comparing the total health to determine a winner
         if (compHealthAfterAttack > playerHealthAfterAttack) {
             playerRecord.losses++
-            rollbar.info(`player has lost ${playerRecord} times!`);
+            rollbar.info(`player has lost ${playerRecord.losses} times!`);
             res.status(200).send('You lost!')
         } else {
             playerRecord.losses++
-            rollbar.info(`player has won ${playerRecord} times!`)
+            rollbar.info(`player has won ${playerRecord.wins} times!`)
             res.status(200).send('You won!')
         }
     } catch (error) {
@@ -99,6 +99,7 @@ app.get('/api/player', (req, res) => {
 
 
 const port = process.env.PORT || 3000
+// app.use(rollbar.errorHandler())
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)

@@ -16,7 +16,7 @@ beforeEach(async () => {
 })
 
 afterAll(async () => {
-// await driver.quit()
+await driver.quit()
 })
 
 test('Title shows up when page loads', async () => {
@@ -43,15 +43,17 @@ test('Add to Duo button displays player-duo', async () => {
     await driver.sleep(2000)
     await driver.findElement(By.css('.bot-btn')).click()
     await driver.findElement(By.css('.bot-btn')).click()
-    
+    const duoDiv = await driver.findElement(By.id('player-duo')) //added
+    expect(duoDiv.isdisplayed).toBeTruthy //added
+
     await driver.findElement(By.id('duel')).click()
-    await driver.sleep(4000)
+    await driver.sleep(2000)
 })
 
 //     const duoDiv = await driver.findElement(By.id('player-duo'))
-//     // const displayed = await duoDiv.isDisplayed()
+
 //     // expect(duoDiv).toBe(true)
-//      expect(duoDiv.isdisplayed).toBeTruthy
+ 
 //     await driver.sleep(4000) 
 // })
 // ----------
