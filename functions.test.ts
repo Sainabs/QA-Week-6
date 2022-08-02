@@ -15,7 +15,7 @@ describe('shuffleArray', () => {
    test("ShuffleArray should shuffle around items.", () => {
       const Arr = ['red', 'green','blue'];
          // it('matches even if received contains additional elements', () => {
-            expect(shuffleArray(Arr)).not.toStrictEqual(Arr);
+            expect(shuffleArray(Arr)).not.toEqual(Arr);
       });
 });
 

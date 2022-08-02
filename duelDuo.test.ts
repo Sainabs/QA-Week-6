@@ -57,15 +57,7 @@ test('Add to Duo button displays player-duo', async () => {
 //     await driver.sleep(4000) 
 // })
 // ----------
-// test('Add to Duo button displays player-duo', async () => {
-  
-//     await driver.findElement(By.class('bot-card outline')).click()
-//     const player = await driver.findElement(By.id('player-duo'))
-//     const displayed = await player.isDisplayed()
 
-//     expect(displayed).toBe(true)
-//     await driver.sleep(4000) 
-// })
 
 
 
